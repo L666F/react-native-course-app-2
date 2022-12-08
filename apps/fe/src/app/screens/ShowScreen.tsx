@@ -32,14 +32,28 @@ const ShowScreen = ({
   });
 
   return (
-    <View>
-      <Text>ID: {blogPost?.id}</Text>
-      <Text>Title: {blogPost?.title}</Text>
-      <Text>Content: {blogPost?.content}</Text>
+    <View style={styles.view}>
+      <Text style={styles.title}>{blogPost?.title}</Text>
+      <Text style={styles.content}>{blogPost?.content}</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  view: {
+    borderWidth: 1,
+    borderColor: 'black',
+    margin: 10,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    margin: 5,
+  },
+  content: {
+    margin: 5,
+    fontSize: 14,
+  },
+});
 
 export default ShowScreen;
